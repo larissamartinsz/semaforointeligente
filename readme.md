@@ -79,11 +79,18 @@ A seguir, tem-se a explicação de todas as etapas do código.
 1. **`medirDistancia()`**:
    - Controla o sensor ultrassônico para calcular a distância de objetos em centímetros.
    - Usa o tempo de retorno do sinal para determinar a distância.
+   - O ultrassônico substitui à detecção de luz (LDR) para simular a passagem de carros.
 
 2. **`callback()`**:
    - Processa mensagens recebidas via MQTT.
    - Atualiza os estados dos botões e controla os LEDs dos semáforos com base nas mensagens recebidas do Ubidots.
    - Quando `botao1` é desativado, todos os LEDs são desligados.
+
+
+## **Modo Noturno**
+O sistema possui um modo noturno, ativado automaticamente com base na leitura do sensor de luminosidade (LDR). Quando o valor de luminosidade está abaixo do limiarLdr (indicando um ambiente escuro), os semáforos entram no modo de segurança noturno, no qual ambos os semáforos permanecem com o LED amarelo piscando. Esse comportamento é projetado para sinalizar atenção aos motoristas em situações de baixa visibilidade, como à noite ou em locais pouco iluminados.
+
+Este modo é desativado automaticamente assim que a luminosidade do ambiente atinge níveis normais, retornando ao ciclo padrão do sistema.
 
 ---
 
