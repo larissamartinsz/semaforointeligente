@@ -2,7 +2,9 @@
 
 Este projeto é um sistema completo para controlar dois semáforos conectados a um ESP32, integrando sensores (LDR e ultrassônico) e comunicação com a plataforma IoT Ubidots. 
 
-<a href="link" target="_blank">Acesse um vídeo mostrando o seu funcionamento.</a>
+<a href="https://youtu.be/5T4Ut9LH4jY?si=u2KGNBdaWmqW4HcM" target="_blank">Acesse um vídeo mostrando o seu funcionamento.</a>
+
+Observação: O Led vermelho não está funcionando pois provavelmente está queimado.
 
 
 <br>
